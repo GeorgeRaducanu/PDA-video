@@ -1,0 +1,26 @@
+{
+  "name": "Manim Development Environment",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "Rickaym.manim-sideview", // Provides a live preview of your Manim scenes
+        "analytic-signal.preview-mp4" // Allows you to preview rendered MP4 files in VS Code
+      ]
+    }
+  },
+  "features": {
+    "git": "latest" // Ensures Git is available inside the container
+  },
+  "remoteUser": "manimuser" // Run as the non-root user by default
+}
